@@ -1,0 +1,109 @@
+/* Texte en italique*/
+.italic{font-style: italic;}
+
+/* Nom du commerce*/
+h1{  text-align: center; padding : 15px;}
+h1 a, h1 a:hover{  text-decoration: none;  color: black;}
+
+/* Liens de la barre de naviguation*/
+.nav-link{ color: white;}
+.nav-item a:hover{ background-color: white; color: black;}
+
+/* Lien pour afficher tous les articles*/
+.View_products{ text-align: center;}
+.View_products a{
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  text-decoration: none;
+  color: black;}
+.View_products a:hover{
+  text-decoration: none;
+  background-color: black;
+  color: white;}
+  /* Barre de recherche */
+  .research{
+    margin-top : 20px;
+  }
+/*---------------------------------------*/
+/* PAGE D'AFFICHAGE DES PRODUITS */
+  /* Couleur panier*/
+.caddy{color: green;}
+
+/*---------------------------------------*/
+/* PAGE D'AFFICHAGE DE LA COMMANDE */
+  /* Total panier de la commande*/
+  .totalPrice{
+    background-color: #E9ECEF;
+    padding: 7px;
+    margin: 10px 0px;
+    font-size: 20px;
+    text-align: right;
+  }
+  .delete{color:red;
+  }
+
+
+
+/* Footer*/
+footer{
+  position: absolute;
+  width: 100%;
+    bottom: 0;
+}
+footer a, footer a:hover{
+  text-decoration: none;
+  color: white;
+}
+footer li{
+list-style: none;
+margin-left : 20%;
+}
+footer h5{
+  text-align: center;
+  color: white;
+  padding : 10px;
+}
+/* Liens réseaux sociaux footer*/
+.socialnetwork{
+  text-align: center;
+  font-size: 20px;
+  padding: 25px;
+}
+.socialnetwork a{
+  margin-left: 20px;
+}
+/*---------------------------------------*/
+/* Connexion utilisateur */
+.field_login {
+  padding: 30px;
+  width: 400px;
+  background-color: #F7F7F7;
+  margin: 0 auto;
+  border-radius: 2px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+.field_login h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.field_login .name {
+  height: 44px;
+  font-size: 16px;
+  width: 100%;
+  margin-bottom: 10px;
+  background: #fff;
+  border: 1px solid #d9d9d9;
+  border-top: 1px solid #c0c0c0;
+  border-radius: 2px;
+  padding: 0 8px;
+}
+
+.login_submit{
+  height: 44px;
+  font-size: 16px;
+  width: 100%;
+  margin-bottom: 10px;
+  background-color: black;
+  color: white;
+}
