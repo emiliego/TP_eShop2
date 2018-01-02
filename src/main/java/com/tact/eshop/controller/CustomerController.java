@@ -29,6 +29,45 @@ public class CustomerController {
 		return "user/profil";
 	}
 	
+	@RequestMapping("login")
+	public String login(HttpSession session) {
+		String returnString;
+		if(session.getAttribute("account") != null) {
+			returnString = "home/index";
+		}
+		else {
+			returnString = "user/login";
+		}
+		return returnString;
+		
+	}
+	
+	@RequestMapping("logout")
+	public String logout(HttpSession session) {
+		if(session.getAttribute("account") != null) {
+			session.invalidate();
+		}
+		return "user/logout";
+	}
+	
+	@PostMapping("connexion")
+	public String connexion(Customer customer, HttpSession session, Model model) {
+		List<Customer> customers = customerRepo.findByLastName(customer.getLastName());
+		ArrayList<Customer> customerLogin = new ArrayList<Customer>();
+		
+		for(Customer customerFromList : customers) {
+			if(customerFromList.getFirstName().equals(customer.getFirstName())) {
+				customerLogin.add(customerFromList);
+			}
+		}		
+		if(!customerLogin.isEmpty()) {
+			session.setAttribute("account", customerLogin.get(0));
+			return "home/index";
+		}
+		else{
+			return "user/login";
+		}
+	}
 	
 
 	
